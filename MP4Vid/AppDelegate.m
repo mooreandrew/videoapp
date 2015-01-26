@@ -33,13 +33,24 @@
     // Override point for customization after application launch.
     AVPlayerViewController *playerViewController = [[AVPlayerViewController alloc] init];
     
+
+        
     playerViewController.player = [AVPlayer playerWithURL:[[NSBundle mainBundle]
                                                            URLForResource:content
                                    withExtension:@"mp4"]];
-    [playerViewController.player play];
-    self.window.rootViewController = playerViewController;
-    [self.window makeKeyAndVisible];
-    
+
+ 
+        playerViewController.player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+        
+       
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(playerItemDidReachEnd:)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object: playerViewController.player.currentItem];
+        
+        [playerViewController.player play];
+        self.window.rootViewController = playerViewController;
+        [self.window makeKeyAndVisible];
 
         
     }
@@ -48,7 +59,10 @@
 }
 
 
-
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+    AVPlayerItem *p = [notification object];
+    [p seekToTime:kCMTimeZero];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
