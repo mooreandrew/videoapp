@@ -19,7 +19,6 @@
 		06C11BF31A589E9D00DD5D5A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06C11BF11A589E9D00DD5D5A /* LaunchScreen.xib */; };
 		06C11BFF1A589E9D00DD5D5A /* MP4VidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C11BFE1A589E9D00DD5D5A /* MP4VidTests.m */; };
 		06C7C9B71A5B24FB00825383 /* Default-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C7C9B61A5B24FB00825383 /* Default-76.png */; };
-		06F341A61A593B7F00C0D6FC /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06F341A51A593B7F00C0D6FC /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 		06C11BFD1A589E9D00DD5D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06C11BFE1A589E9D00DD5D5A /* MP4VidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MP4VidTests.m; sourceTree = "<group>"; };
 		06C7C9B61A5B24FB00825383 /* Default-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-76.png"; path = "../Default-76.png"; sourceTree = "<group>"; };
-		06F341A51A593B7F00C0D6FC /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../Entitlements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +94,6 @@
 				06C7C9B61A5B24FB00825383 /* Default-76.png */,
 				067FD4591A59DE7300D27FE3 /* sample.mp4 */,
 				067FD4561A59CC6200D27FE3 /* Default-152.png */,
-				06F341A51A593B7F00C0D6FC /* Entitlements.plist */,
 				06A4A4AB1A59297B00ABBA3F /* FilmName.txt */,
 				067FD4531A59CAB200D27FE3 /* url.txt */,
 				06C11BE61A589E9D00DD5D5A /* AppDelegate.h */,
@@ -217,7 +214,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F341A61A593B7F00C0D6FC /* Entitlements.plist in Resources */,
 				06A4A4AC1A59297B00ABBA3F /* FilmName.txt in Resources */,
 				06C7C9B71A5B24FB00825383 /* Default-76.png in Resources */,
 				067FD4581A59CC6200D27FE3 /* Default-152.png in Resources */,
@@ -304,6 +300,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -346,6 +343,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -370,7 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				INFOPLIST_FILE = MP4Vid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -386,7 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				INFOPLIST_FILE = MP4Vid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
